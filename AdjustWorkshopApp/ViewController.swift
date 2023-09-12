@@ -112,6 +112,18 @@ class ViewController: UIViewController {
         // Print a text after event request is sent
         print("Adjust's trackEvent is called!")
         
+        
+        
+        // Not related with event tracking, only for receiving attribution data
+        print("Attribution Data")
+        
+        let attribution = Adjust.attribution()
+        let tracker_name = (attribution?.trackerName)!
+        let tracker_token = attribution?.trackerToken!
+        
+        print("Attribution Data - Tracker Name: " + tracker_name)
+        print("Attribution Data - Tracker Token: " + tracker_token!)
+        
     }
     
 

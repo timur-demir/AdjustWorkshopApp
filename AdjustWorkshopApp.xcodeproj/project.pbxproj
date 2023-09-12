@@ -18,6 +18,7 @@
 		39D289E82A6FD071007C9D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D289E62A6FD071007C9D75 /* LaunchScreen.storyboard */; };
 		39D289F12A6FD3E6007C9D75 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D289F02A6FD3E6007C9D75 /* AdSupport.framework */; };
 		39D289F42A6FD6D3007C9D75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D289F32A6FD6D3007C9D75 /* SecondViewController.swift */; };
+		39F62DDD2AB0695A008B83CD /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3926731F2A8B86960092846A /* AppTrackingTransparency.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 				392673222A8B86960092846A /* AdServices.framework in Frameworks */,
 				39D289F12A6FD3E6007C9D75 /* AdSupport.framework in Frameworks */,
 				392673212A8B86960092846A /* AppTrackingTransparency.framework in Frameworks */,
+				39F62DDD2AB0695A008B83CD /* AppTrackingTransparency.framework in Frameworks */,
 				3926731D2A8B862D0092846A /* Adjust in Frameworks */,
 				3926731E2A8B86960092846A /* AdSupport.framework in Frameworks */,
 			);

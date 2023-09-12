@@ -9,7 +9,7 @@ import UIKit
 import Adjust
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
 
     var window: UIWindow?
     
@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appToken: yourAppToken,
             environment: environment)
         adjustConfig?.logLevel = ADJLogLevelVerbose
-        
+        adjustConfig?.delegate = self
+
         Adjust.appDidLaunch(adjustConfig)
         
         print("Adjust's appDidLaunch called!")
@@ -37,7 +38,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
+    
+    func applicationDidBecomeActive(_ application: UIApplication){
+        // ATT pop-up should be called here!
+        
+        
+        // Show ATT dialog.
+        Adjust.requestTrackingAuthorization { status in
+            switch status {
+                case 0:
+                    // ATTrackingManagerAuthorizationStatusNotDetermined case
+                    print("ATT: ATTrackingManagerAuthorizationStatusNotDetermined")
+                    //self.initAdjust()
+                    break
+                case 1:
+                    // ATTrackingManagerAuthorizationStatusRestricted case
+                    print("ATT: ATTrackingManagerAuthorizationStatusRestricted")
+                    //self.initAdjust()
+                    break
+                case 2:
+                    // ATTrackingManagerAuthorizationStatusDenied case
+                    print("ATT: ATTrackingManagerAuthorizationStatusDenied")
+                    //self.initAdjust()
+                    break
+                case 3:
+                    // ATTrackingManagerAuthorizationStatusAuthorized case
+                    print("ATT: ATTrackingManagerAuthorizationStatusAuthorized")
+                    //self.initAdjust()
+                    break
+                default:
+                    //self.initAdjust()
+                    break
+            }
+        }
+        
+    
+    }
+    
+    
+    
+    func adjustAttributionChanged(_ attribution: ADJAttribution?) {
+        
+    }
+    
+    
 
 }
 
