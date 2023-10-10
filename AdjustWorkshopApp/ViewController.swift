@@ -127,5 +127,32 @@ class ViewController: UIViewController {
     }
     
 
+    @IBAction func secondBtnClicked(_ sender: Any) {
+        
+        print("second button is clicked")
+        
+        if UserDefaults.standard.bool(forKey: "isDeferredDeeplinkWaiting"){
+            if (UserDefaults.standard.string(forKey: "deferredDeeplinkURL") != "" || UserDefaults.standard.string(forKey: "deferredDeeplinkURL") != nil) {
+                      
+                let deferredDeeplink = URL(string: UserDefaults.standard.string(forKey: "deferredDeeplinkURL")!)
+                      
+                // since we will use the deeplink set isDeferredDeeplinkWaiting as false
+                UserDefaults.standard.set(false, forKey: "isDeferredDeeplinkWaiting")
+                      
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.handleDeeplink(deferredDeeplink!)
+                      
+            }
+        }else{
+            // create the alert
+            let alert = UIAlertController(title: "No Link to Open", message: "There is no different deeplink content.", preferredStyle: UIAlertController.Style.alert)
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+
+        
+    }
 }
 

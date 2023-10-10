@@ -327,6 +327,7 @@
 				INFOPLIST_FILE = AdjustWorkshopApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Great App";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data may be used  for personalized advertising and analytics purposes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -359,6 +360,7 @@
 				INFOPLIST_FILE = AdjustWorkshopApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Great App";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data may be used  for personalized advertising and analytics purposes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
